@@ -27,6 +27,16 @@ class App extends Component {
 	};
 
 	render() {
+		const charList = this.state.charlist.map((item, index) => {
+			return (
+				<CharComponent
+					key={index}
+					letter={item}
+					click={event => this.removeItemHandler(index)}
+				/>
+			);
+		});
+
 		return (
 			<div className="App">
 				<input
@@ -37,14 +47,7 @@ class App extends Component {
 				<p>length: {this.state.length}</p>
 				<ValidationComponent textlength={this.state.length} />
 
-				{this.state.charlist.map((item, index) => {
-					return (
-						<CharComponent
-							letter={item}
-							click={event => this.removeItemHandler(index)}
-						/>
-					);
-				})}
+				{charList}
 
 				<ol>
 					<li>
