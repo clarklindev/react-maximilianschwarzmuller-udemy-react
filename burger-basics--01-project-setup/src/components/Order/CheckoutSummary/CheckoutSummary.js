@@ -1,7 +1,7 @@
 import React from 'react';
 import Burger from '../../Burger/Burger';
 import Button from '../../UI/Button/Button';
-import classes from './CheckoutSummary.modules.scss';
+import classes from './CheckoutSummary.modules.css';
 const CheckoutSummary = props => {
 	return (
 		<div className={classes.CheckoutSummary}>
