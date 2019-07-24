@@ -7,11 +7,46 @@ import Input from '../../../components/UI/Input/Input';
 
 class ContactData extends Component {
 	state = {
-		name: '',
-		email: '',
-		address: {
-			street: '',
-			postalCode: ''
+		orderForm: {
+			name: {
+				elementType: 'input',
+				elementConfig: { type: 'text', placeholder: 'your name' },
+				value: ''
+			},
+			street: {
+				elementType: 'input',
+				elementConfig: { type: 'text', placeholder: 'street' },
+				value: ''
+			},
+			zipCode: {
+				elementType: 'input',
+				elementConfig: { type: 'text', placeholder: 'ZIP code' },
+				value: ''
+			},
+
+			country: {
+				elementType: 'input',
+				elementConfig: { type: 'text', placeholder: 'Country' },
+				value: ''
+			},
+
+			email: {
+				elementType: 'input',
+				elementConfig: { type: 'email', placeholder: 'Your email' },
+				value: ''
+			},
+
+			deliveryMethod: {
+				elementType: 'select',
+				elementConfig: {
+					type: 'email',
+					options: [
+						{ value: 'fastest', displayValue: 'Fastest' },
+						{ value: 'cheapest', displayValue: 'cheapest' }
+					]
+				},
+				value: ''
+			}
 		},
 		loading: false
 	};
@@ -21,13 +56,7 @@ class ContactData extends Component {
 		console.log(this.props.ingredients);
 		const order = {
 			ingredients: this.props.ingredients,
-			price: this.props.price, //reallife scenario: should calculate on server to avoid manipulation
-			customer: {
-				name: 'Max Schwarzmuller',
-				address: { street: 'test 1', zipCode: '4324', country: 'Germany' },
-				email: 'test@test.com'
-			},
-			deliveryMethod: 'fastest'
+			price: this.props.price //reallife scenario: should calculate on server to avoid manipulation
 		};
 		axios
 			.post('/orders.json', order)
@@ -45,12 +74,7 @@ class ContactData extends Component {
 	render() {
 		let form = (
 			<form>
-				<Input
-					inputtype="input"
-					type="text"
-					name="name"
-					placeholder="your name"
-				/>
+				<Input elementType="..." elementConfig="..." value="..." />
 				<Input
 					inputtype="input"
 					type="email"
