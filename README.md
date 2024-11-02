@@ -1,8 +1,7 @@
-# Udemy - Maximilian Schwarzmüller - React 16 - The Complete Guide (incl. React Router 4 & Redux)
-
-- NOTE: 2024 - the course has been updated and renamed [React - The Complete Guide 2024 (incl. Next.js, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
-
+- NOTE: 2024 - there is an update to this course and it has been renamed [React - The Complete Guide 2024 (incl. Next.js, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
 ---
+
+# Udemy - Maximilian Schwarzmüller - React 16 - The Complete Guide (incl. React Router 4 & Redux)
 
 ## 01 Getting Started
 
